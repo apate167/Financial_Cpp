@@ -19,9 +19,4 @@
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
-  <ItemGroup>
-    <None Include="Carlos Oliveira (auth.) - Practical C++ Financial Programming (2015, Apress).pdf">
-      <Filter>Resource Files</Filter>
-    </None>
-  </ItemGroup>
 </Project>

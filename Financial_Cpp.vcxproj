@@ -155,9 +155,6 @@
   <ItemGroup>
     <ClCompile Include="Financial_Cpp.cpp" />
   </ItemGroup>
-  <ItemGroup>
-    <None Include="Carlos Oliveira (auth.) - Practical C++ Financial Programming (2015, Apress).pdf" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
