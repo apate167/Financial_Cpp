@@ -1,14 +1,14 @@
 // Financial_Cpp.cpp : This file contains the 'main' function. Program execution begins and ends there.
 //
 
-#include <iostream>
 #include <boost/array.hpp>
+#include "Interest.h"
 
 int main()
 {
-	boost::array<int, 4> arr = { {1, 2, 3, 4} };
-	for (int i = 0; i < 4; i++)
-		std::cout << arr[i] << std::endl;
+	InterestCalc ircalculator(0.10);
+	double res = ircalculator.OnePeriod(1000);
+	std::cout << "The one period interest is : $" << res << std::endl;
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu

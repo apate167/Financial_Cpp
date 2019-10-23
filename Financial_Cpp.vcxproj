@@ -154,6 +154,10 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Financial_Cpp.cpp" />
+    <ClCompile Include="Interest.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Interest.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
