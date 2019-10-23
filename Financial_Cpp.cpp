@@ -4,20 +4,23 @@
 #include <boost/array.hpp>
 #include "Interest.h"
 
-int main()
+int main(int argc, const char * argv[])
 {
-	InterestCalc ircalculator(0.10);
-	double res = ircalculator.OnePeriod(1000);
-	std::cout << "The one period interest is : $" << res << std::endl;
+	double rt = atof(argv[1]);
+	double val = atof(argv[2]);
+	double periods = atof(argv[3]);
+
+	/***************Pass values to calculate the one period amounts*******************************/
+	/* */
+	InterestCalc ircalculator(rt);
+	double res = ircalculator.OnePeriod(val);
+	std::cout << "The one period amount is : \t$" << res << std::endl;
+	
+	/**************Pass values to the multiperiod and continuous compounding*********************/
+	/**/
+	CompoundRtCalc crate(rt);
+	std::cout << "The multi-period amount is : \t$" << crate.multiPeriod(val, periods) << std::endl;
+	std::cout << "The continuous amount is : \t$" << crate.contCompound(val, periods) << std::endl;
+
 }
 
-// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
-// Debug program: F5 or Debug > Start Debugging menu
-
-// Tips for Getting Started: 
-//   1. Use the Solution Explorer window to add/manage files
-//   2. Use the Team Explorer window to connect to source control
-//   3. Use the Output window to see build output and other messages
-//   4. Use the Error List window to view errors
-//   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
-//   6. In the future, to open this project again, go to File > Open > Project and select the .sln file
